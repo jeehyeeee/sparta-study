@@ -25,18 +25,21 @@ function solution(flo) {
   return answer;
 }
 function solution(num_list) {
-  var answer = 0;
+  let sum = 0;
+  let mul = 1;
   // 넘리스트의 길이를 순회
   for (let i = 0; i < num_list.length; i++) {
     // 만약에 넘리스트의 길이가 11이상이면 모든 원소의 합
     if (num_list.length >= 11) {
-      return (sum += num_list[i]);
+      sum += num_list[i];
       answer = sum;
       // 10이하면 모든 원소의 곱
-    } else if (num_list < 10) {
-      mul *= num_list[i];
+    } else {
+      answer = mul *= num_list[i];
       answer = mul;
     }
   }
   return answer;
 }
+console.log(num_list[(1, 3, 4, 5, 6, 4, 3, 6, 5)]);
+
